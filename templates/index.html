@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Open in VN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <script>
+    window.onload = function () {
+      // Auto-download after page loads
+      setTimeout(() => {
+        window.location.href = "/download";
+      }, 800);
+    };
+  </script>
+  
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Opening in VN 🎬</h2>
+  <p>If VN doesn't open automatically, tap below:</p>
+  
+  <a href="/download">
+    <button>Download & Open in VN</button>
+  </a>
+</body>
+</html>

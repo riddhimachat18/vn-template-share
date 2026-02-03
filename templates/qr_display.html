@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VN Template QR Code</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      text-align: center;
+      padding: 40px;
+      background: #f5f5f5;
+    }
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .qr-code {
+      margin: 20px 0;
+    }
+    .qr-code img {
+      max-width: 300px;
+      height: auto;
+    }
+    .url {
+      background: #f0f0f0;
+      padding: 10px;
+      border-radius: 5px;
+      font-family: monospace;
+      word-break: break-all;
+      margin: 20px 0;
+    }
+    .instructions {
+      color: #666;
+      margin-top: 20px;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .emoji {
+      font-size: 24px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>VN Template QR Code <span class="emoji">🎬</span></h1>
+    
+    <div class="qr-code">
+      <img src="data:image/png;base64,{{ qr_image }}" alt="QR Code">
+    </div>
+    
+    <div class="url">{{ url }}</div>
+    
+    <div class="instructions">
+      <p><strong>📱 Scan with your phone to:</strong></p>
+      <p>✅ Auto-download VN template<br>
+         ✅ Open directly in VN app</p>
+      
+      <p><small>Works on Android & iPhone</small></p>
+      
+      <p><strong>⚠️ Troubleshooting:</strong></p>
+      <p><small>
+        • Make sure your phone is on the same WiFi<br>
+        • Try typing the URL manually in your phone browser first<br>
+        • If it doesn't work, Windows Firewall might be blocking it
+      </small></p>
+    </div>
+    
+    <p><a href="/">← Back to template page</a></p>
+  </div>
+</body>
+</html>
