@@ -10,7 +10,7 @@
       // Auto-download after page loads
       setTimeout(() => {
         window.location.href = "/download";
-      }, 800);
+      }, 2000);
     };
   </script>
   
@@ -18,21 +18,98 @@
     body {
       font-family: system-ui, sans-serif;
       text-align: center;
-      padding: 40px;
+      padding: 20px;
+      background: #fff4f2;
+      min-height: 100vh;
+      margin: 0;
+      color: #333;
     }
-    button {
-      padding: 12px 20px;
+    
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      background: #fff9f7;
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .profile-pic {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      margin-bottom: 15px;
+    }
+    
+    .creator-name {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      background: linear-gradient(45deg, #333, #666);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .template-title {
       font-size: 16px;
+      opacity: 0.9;
+      margin-bottom: 25px;
+    }
+    
+    .download-btn {
+      background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+      border: none;
+      padding: 15px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      margin: 10px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    
+    .download-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .auto-download-text {
+      font-size: 14px;
+      opacity: 0.8;
+      margin-top: 20px;
+    }
+    
+    .emoji {
+      font-size: 20px;
     }
   </style>
 </head>
 
 <body>
-  <h2>Opening in VN 🎬</h2>
-  <p>If VN doesn't open automatically, tap below:</p>
-  
-  <a href="/download">
-    <button>Download & Open in VN</button>
-  </a>
+  <div class="container">
+    <img src="/static/peaches._.ncream_pfp.jpeg" alt="Profile" class="profile-pic">
+    
+    <div class="creator-name">peaches._.ncream</div>
+    <div class="template-title">Template Download</div>
+    
+    <h2>Opening in VN <span class="emoji">🎬</span></h2>
+    
+    <a href="/download" class="download-btn">
+      Download Naal Nachna Template
+    </a>
+    
+    <div class="auto-download-text">
+      <p>Auto-downloading in 2 seconds...</p>
+      <p><small>If VN doesn't open automatically, tap the button above</small></p>
+    </div>
+  </div>
 </body>
 </html>
